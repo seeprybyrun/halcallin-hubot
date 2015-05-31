@@ -2,10 +2,16 @@ module.exports = function (robot) {
 
   var crawl = function (error, response_code, body) {
     if (error) {
-      return 'No definition found :(';
+      return 'Error accessing Urban Dictionary'
     } else {
       json = JSON.parse(body);
-      return json.list[0].definition;
+      definitions = json.list;
+      if (definitions.length === 0) {
+        return 'No definition found :('
+      }
+      else {
+        return json.list[0].definition;
+      }
     }
   };
 
