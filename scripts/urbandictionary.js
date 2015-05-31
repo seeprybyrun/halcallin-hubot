@@ -14,7 +14,7 @@ module.exports = function (robot) {
   var website = 'http://api.urbandictionary.com/v0/define?term=';
 
   robot.respond(/define( me)? (.*)/i, function (msg) {
-    request.get({ url: website+msg }, function (error, response_code, body) {
+    request.get({ url: website+msg.match[2] }, function (error, response_code, body) {
       msg.send(crawl(error, response_code, body));
     });
   });
