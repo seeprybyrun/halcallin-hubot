@@ -2,8 +2,8 @@
   "name": "halcallin-hubot",
   "version": "0.0.0",
   "private": true,
-  "author": "Chris Pryby <chris.pryby@udacity.com>",
-  "description": "A simple helpful robot for your Company",
+  "author": "Chris Pryby <cpryby@gmail.com>",
+  "description": "A simple helpful robot",
   "dependencies": {
     "hubot": "^2.12.0",
     "hubot-diagnostics": "0.0.1",
